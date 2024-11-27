@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
   return (
     <Container maxWidth="xl">
-      <Grid2 container gap={2} alignItems="center" justifyContent="center">
+      <Grid2 container gap={6} alignItems="center" justifyContent="center">
         {data.map((item, index) => (
           <Grid2 item key={index}>
             <CardCom cardData={item} />
