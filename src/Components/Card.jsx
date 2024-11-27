@@ -8,11 +8,11 @@ export default function CardCom({ cardData }) {
     <Box
       sx={{
         position: "relative",
-        width: 220,
-        height: 220,
+        width: 250,
+        height: 250,
         transformStyle: "preserve-3d",
         transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
-        transition: "transform 0.6s",
+        transition: "transform 0.8s",
       }}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
@@ -29,7 +29,7 @@ export default function CardCom({ cardData }) {
           backgroundImage: `url(${cardData.bg})`,
           backgroundSize: "cover",
           color: "#fff",
-          padding: "16px",
+          boxShadow: 0,
         }}
       >
         <Box
@@ -87,16 +87,18 @@ export default function CardCom({ cardData }) {
           backfaceVisibility: "hidden",
           borderRadius: "12px",
           overflow: "hidden",
-          width: 220,
-          height: 220,
+          width: "100%",
+          height: "100%",
           backgroundColor: cardData.hexcode,
           color: "#fff",
           transform: "rotateY(180deg)",
-          padding: "16px",
+          boxShadow: 0,
         }}
       >
         <Box
           sx={{
+            position: "relative",
+            top: 8,
             zIndex: 2,
           }}
         >
@@ -110,7 +112,7 @@ export default function CardCom({ cardData }) {
           />
         </Box>
 
-        <Box>
+        <Box padding={"12px"}>
           <Box display={"flex"} alignItems={"center"} gap={3}>
             <Box>
               <Typography
