@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardCom from "../Components/Card";
 import axios from "axios";
-import { Container, Grid2 } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 const Home = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -16,13 +16,13 @@ const Home = () => {
   }, []);
   return (
     <Container maxWidth="xl">
-      <Grid2 container gap={4} alignItems="center" justifyContent="center">
+      <Grid container gap={4} alignItems="center" justifyContent="center">
         {data.map((item, index) => (
-          <Grid2 item key={index}>
+          <Grid item key={index}>
             <CardCom cardData={item} />
-          </Grid2>
+          </Grid>
         ))}
-      </Grid2>
+      </Grid>
     </Container>
   );
 };
